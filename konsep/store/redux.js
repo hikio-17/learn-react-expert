@@ -14,7 +14,7 @@ function createStore(reducer) {
        listeners = listeners.filter((listenerItem) => listenerItem !== listener);
      };
    };
- 
+  
    const dispatch = (action) => {
      state = reducer(state, action);
      listeners.forEach((listener) => listener());
